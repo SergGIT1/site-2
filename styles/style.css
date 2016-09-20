@@ -1,0 +1,487 @@
+  /*CSS RESET*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {  
+  padding: 0; 
+  margin: 0; 
+  outline: 0;
+  box-sizing:border-box;
+  } 
+table { 
+  border-collapse: collapse; 
+  border-spacing: 0; 
+  } 
+fieldset,img {  
+  border: 0; 
+  } 
+address,caption,cite,code,dfn,em,strong,th,var { 
+  font-weight: normal; 
+  font-style: normal; 
+  } 
+ol,ul { 
+  list-style: none; 
+  } 
+caption,th { 
+  text-align: left; 
+  } 
+h1,h2,h3,h4,h5,h6 { 
+  font-weight: normal; 
+  font-size: 100%; 
+  } 
+q:before,q:after { 
+  content:''; 
+  } 
+abbr,acronym { border: 0; 
+  } 
+  /* конец RESET*/
+/*подключение*/
+@font-face {
+  font-family: 'Tahoma';
+  src: url(fonts/'Tahoma.woff') format('woff'),
+       url(fonts/'Tahoma.ttf') format('truetype'),
+       url(fonts/'Tahoma.svg#Tahoma') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'tahoma-file';
+  src: url(fonts/'tahoma-file.eot');
+  src: url(fonts/'tahoma-file.woff2') format('woff2'),
+       url('tahoma-file.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body{
+  background: #ececec;
+  font-family: 'tahoma-file', serif, "Times New Roman", Times,  Baskerville, Georgia;
+  position:relative;
+  font-size:86%;
+  box-sizing:border-box;
+}
+
+header{
+  max-width: 800px;
+  margin: 0 auto;
+  position:relative;
+}
+
+/*начало логотип*/
+.logo{
+    margin: 2.5% 0 1.75% 0;
+    display: inline-block;
+    color: #907a5f;
+}
+
+.logo h1 a{
+  text-decoration: none;
+}
+
+.logo h1{
+  font-size:270%;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-style: italic;
+}
+
+.logo span{
+  color: #101519;
+}
+
+.logo a{
+    color: #907a5f;
+}
+/*конец логотип*/
+
+/*начало корзина*/
+.basket, form{
+  position:absolute;
+  right: 0;
+}
+
+.basket{
+  top:0;
+  color: #101519;
+}
+
+.basket a{
+  color: #101519;
+  padding-right: 2%;
+  margin-left: -4%;
+  border-right: 1px solid #101519;
+}
+
+.basket span{
+  padding-left: 2%;
+}
+/*конец корзины*/
+
+/*начало поиска в шапке*/
+form{
+  top: 35px;
+  padding: 0;
+  max-width: 307px;
+}
+
+input{
+  height: 25px;
+  border:none;
+}
+
+input[type="search"]{
+  width: 220px;
+}
+
+input[type="search"]:focus{
+  background: rgba(0, 0, 255, 0.1);
+}
+
+input[type="submit"]{
+  width:80px;
+  background: #101519;
+  color: #d7ac55;
+  font-weight: bold;
+}
+/*конец поиска в шапке*/
+
+/*начало меню*/
+nav{
+  width: 100%;
+  background: #101519;
+}
+
+ nav ul{
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap:wrap;
+  }
+
+nav li{
+  display: inline-block;
+  height: 32px;
+  line-height: 32px;
+}
+
+nav li:last-child{
+  border-right: none;
+}
+
+nav li a{
+ display: block;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-right: 1px dashed #5f6265;
+}
+
+nav li:hover{
+  background: #414a51;
+}
+/*конец меню*/
+
+/*начало скидки*/
+.stock{
+  margin-top: 2%;
+  width: 100%;
+  height: 252px;
+  background: url(../images/stock.png);
+  background-size:cover;
+  position:relative;
+}
+
+.stock p, .stock span{
+  position:absolute;
+  bottom: 0;
+  text-align: center;
+  height: 50px;
+  line-height: 45px;
+  background: rgba(0, 0, 0, 0.39);
+  color: #fff;
+}
+
+.stock p{
+  left: 0;
+  width: 82%;
+  font-size:215%;
+}
+
+.stock span{
+  right: 0;
+  width: 18%;
+  background: rgba(95, 94, 73, 0.39);
+  font-size:110%;
+}
+
+.stock a{
+  color: #fff;
+  text-decoration: none;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+/*конец скидки*/
+
+/*начало  сайтбар Jewelry catalog и товаров*/
+.wrapper{
+  max-width: 800px;
+  min-height: 730px;
+  margin: 2px auto 0 auto;
+  position:relative;
+  background: #fff;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+
+/*начало сайтбар Jewelry catalog*/
+aside{
+  max-width: 220px;
+  min-height:100%;
+  background: #f7f6f1;
+  margin: 2px;
+  padding-top: 2px;
+  padding-right: 20px;
+  padding-left: 1%;
+  float: left;
+  font-size:90%;
+}
+
+aside h3{
+  font-weight: bold;
+  color: #ada575;
+  margin-bottom: 15px;
+}
+
+aside li{
+  border-bottom: 1px dotted #ada575;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+aside li a{
+  color: #ada575;
+  text-decoration: none;
+}
+/*конец сайтбар Jewelry catalog*/
+
+/*начало блоков с товарами*/
+.products{
+  width: 72%;
+  height: auto;
+  padding-left:5px;
+  right: 0;
+  color: #ada575;
+  background: #ffffff;
+
+}
+
+.products h3{
+  margin: 4px 0 12px 16px;
+  font-weight: bold;
+}
+
+.wrapper_flex{
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-flow:row wrap;
+  justify-content: space-around;
+}
+
+.goods{
+  border:1px solid #c5c5c3;
+  margin-bottom: 7px;
+  position:relative;
+  width: 186px;
+  height: 155px;
+  display: inline-block;
+  font-size:83.33%;
+  font-weight: bold;
+}
+
+.goods span{
+  position:absolute;
+  top: 0;
+  height: 22px;
+  line-height: 20px;
+}
+
+.goods .price{
+  background: #f1efe6;
+  width: 73%;
+  padding-left: 10px;
+}
+
+.goods .buy{
+  right: 0;
+  background: #c3bda0;
+  width: 27%;
+  text-align: center;
+}
+
+.goods a{
+   color: #ffffff;
+   text-decoration: none;
+   font-size:80%;
+}
+
+.goods img{
+    margin-top: 25px;
+    width: 120px;
+    height: 100px;
+    margin-left: 30px;
+}
+
+.goods p{
+  background: #f1efe6;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+}
+/*коенц блоков с товарами*/
+
+/*начало пагинация*/
+.pagination{
+  margin-top: 12px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.pagination ul{
+  font-size:83.33%;
+  font-weight: bold;
+  margin: auto;
+}
+
+.pagination ul li{
+  display: inline-block;
+  border-right: 2px solid #ada575;
+}
+
+.pagination ul li a{
+  margin-right: 8px;
+  margin-left: 8px;
+  text-decoration: none;
+  color: #ada575;
+  font-size:83.33%;
+  font-weight: bold;
+}
+
+
+.pagination ul li:first-child{border-right: none;margin-right: -8px;}
+.pagination ul li:nth-child(10){border-right: none;}
+.pagination ul li:nth-child(11){border-right: none;margin-left: -8px;}
+.pagination ul li:nth-child(12){border-right: none;margin-left: -8px;}
+/*конец начало пагинация*/
+
+
+.clear{
+  clear: both;
+}
+
+/*начало подвал*/
+.footer{
+  width: 100%;
+  height: 70px;
+  color: #625e45;
+  background: #d9d6c6;
+  font-size:85%;
+}
+
+
+.footer a{
+  font-size:85%;
+  color: #625e45;
+}
+
+.wrapper_footer{
+  margin: 0 auto;
+  max-width: 800px;
+  height: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  -ms-align-items: center;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: #e6e3d3;
+}
+/*конец подвал*/
+
+/*начало @media запросов, еще не все сделал, что думал*/
+
+@media screen and (max-width: 665px) {
+  .stock p, .stock span{
+    height: 40px;
+    line-height: 35px;
+  }
+
+  .stock p{font-size:150%;}
+  .stock span{font-size:90%;}
+
+  .products {
+    width: 63%;
+  }
+
+  .goods{
+    width: 190px;
+  }
+
+  .pagination ul li a{
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 535px) {
+
+/*header input[type="search"]{
+    width: 170px;
+  }*/
+
+  .basket{width: 100px;/*top:20px;*/}
+  .basket a{border-right: none; font-weight: bold; font-size:102%;}
+  .hidden{visibility: hidden;}
+
+  .logo{margin-top: 0;margin-bottom:7%;}
+  .logo h1{
+  font-size:200%;
+  }
+
+  nav li a{
+  border-right: none;
+  }
+
+  .stock p{
+  left: 0;
+  top: 0;
+  width: 100%;
+  font-size:130%;
+}
+
+.stock span{
+  right: 0;
+  width:100%;
+  background: rgba(95, 94, 73, 0.39);
+  font-size:110%;
+}
+
+  .pagination{
+  font-size:18px;
+  margin-left: -55%;
+}
+
+.pagination ul li:nth-child(11){display: none;}
+.pagination ul li:nth-child(12){display: none;}
+
+}
